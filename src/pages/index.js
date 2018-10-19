@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const IndexPage = ({ location }) => (
+const Home = ({ location }) => (
   <Layout location={location}>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -13,8 +13,8 @@ const IndexPage = ({ location }) => (
   </Layout>
 )
 
-IndexPage.propTypes = {
+Home.propTypes = {
   location: PropTypes.object.isRequired
 }
 
-export default IndexPage
+export default Home
