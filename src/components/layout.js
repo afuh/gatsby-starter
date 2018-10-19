@@ -5,12 +5,12 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import SEO from '../utils/seo'
 
-const Layout = ({ children, location }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={query}
     render={({ site: { meta } }) => (
       <>
-      <SEO path={location.pathname}/>
+      <SEO />
         <Header siteTitle={meta.title} />
         <main>
           {children}
