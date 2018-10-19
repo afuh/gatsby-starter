@@ -1,14 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 
+const Content = styled.header`
+  background: ${({ theme }) => theme.background};
+  box-shadow: ${({ theme }) => theme.shadow};
+  padding: 20px;
+`
+
 const Header = ({ siteTitle }) => (
-  <header style={{ background: 'whitesmoke', padding: 20 }}>
+  <Content >
     <h1 style={{ margin: 0 }}>
       <Link to="/">{siteTitle}</Link>
     </h1>
-  </header>
+  </Content>
 )
 
 Header.propTypes = {
