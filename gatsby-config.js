@@ -1,6 +1,8 @@
+const siteConfig = require('./siteConfig')
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby starter'
+    ...siteConfig
   },
   plugins: [
     'gatsby-plugin-react-helmet'
