@@ -2,7 +2,7 @@ module.exports = {
   title: 'Title',
   titleTemplate: '%s | Site title',
   description: "Site description.",
-  url: 'http://example.com', // no trailing slash
+  siteUrl: 'http://example.com', // no trailing slash
   favicon: '/images/icon-32x32.png',
   image: '/images/cover-1440x720.jpg',
   userTwitter: '',
