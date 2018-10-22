@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import Landing from '../components/landing'
 
 const Home = ({ location }) => (
   <Layout location={location}>
@@ -10,6 +11,7 @@ const Home = ({ location }) => (
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <Link to="/about">Go to About</Link>
+    <Landing />
   </Layout>
 )
 

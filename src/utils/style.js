@@ -1,5 +1,5 @@
 import styledNormalize from 'styled-normalize'
-import { css } from 'styled-components'
+import { css, createGlobalStyle } from 'styled-components'
 
 // Example palette Material 500
 // https://material.io/guidelines/style/color.html
@@ -36,8 +36,6 @@ export const theme = {
   shadow: '0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08)'
 }
 
-export const normalize = styledNormalize
-
 export const defaultFont = [
   '-apple-system',
   'BlinkMacSystemFont',
@@ -65,4 +63,19 @@ export const typography = css`
         text-decoration: underline;
       }
     }
+`
+
+export const GlobalStyle = createGlobalStyle`
+  ${styledNormalize}
+
+  html {
+    font-size: 10px;
+  }
+
+  body {
+    font-size: 1.5rem;
+    font-family: ${defaultFont};
+  }
+
+  ${typography}
 `

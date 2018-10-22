@@ -1,26 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 import Header from './header'
+import Footer from './footer'
 import SEO from '../utils/seo'
 
-import { defaultFont, normalize, typography, theme } from '../utils/style'
-
-const GlobalStyle = createGlobalStyle`
-  ${normalize}
-  ${typography}
-
-  body {
-    font-family: ${defaultFont};
-  }
-`
+import { theme, GlobalStyle } from '../utils/style'
 
 const Main = styled.main`
-  margin: 50px;
+  max-width: 900px;
+  margin: 50px auto;
 `
-
 const Layout = ({ children }) => (
   <StaticQuery
     query={query}
@@ -34,6 +26,7 @@ const Layout = ({ children }) => (
           <Main>
             {children}
           </Main>
+          <Footer />
         </>
       </ThemeProvider>
       </>
