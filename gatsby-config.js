@@ -42,9 +42,17 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-images',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants'
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 900,
+              linkImagesToOriginal: true
+            }
+          },
+          'gatsby-remark-autolink-headers',
+          'gatsby-remark-responsive-iframe',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-prismjs'
         ]
       }
     },
