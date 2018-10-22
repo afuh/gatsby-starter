@@ -6,3 +6,4 @@
 - Google Analytics
 - PWA (Manifest and Offline)
 - Netlify
+- Use Makrdown for the content `src/content/`
