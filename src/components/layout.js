@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
 
 import Header from './header'
+import Footer from './footer'
 import SEO from '../utils/seo'
 
 import { theme, GlobalStyle } from '../utils/style'
@@ -25,6 +26,7 @@ const Layout = ({ children }) => (
           <Main>
             {children}
           </Main>
+          <Footer />
         </>
       </ThemeProvider>
       </>
