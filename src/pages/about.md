@@ -23,10 +23,7 @@ export default () => (
 )
 ```
 
-### Oh look a this nice responsive iframe!
 
 Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-
-<iframe src="https://www.youtube.com/embed/_CLbWAxH2WY?ecver=1" width="600" height="400" frameborder="0"></iframe>
 
 [Go back to Home](/)
