@@ -2,6 +2,9 @@
   "name": "gatsby-starter",
   "description": "Gatsby starter",
   "version": "1.0.0",
+  "engines": {
+    "node": ">= 8.5.0"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
     "gatsby": "^2.0.48",
@@ -46,6 +49,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
+    "test": "stylelint './src/**/*.js' && eslint src/.",
     "serve": "gatsby serve --open"
   },
   "keywords": [
