@@ -50,7 +50,6 @@ module.exports = {
             }
           },
           'gatsby-remark-autolink-headers',
-          'gatsby-remark-responsive-iframe',
           'gatsby-remark-smartypants',
           'gatsby-remark-prismjs'
         ]

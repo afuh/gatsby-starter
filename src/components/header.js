@@ -5,7 +5,7 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 import { theme } from '../utils/style'
 
 const Content = styled.header`
-  background: ${({ theme }) => theme.background};
+  background: ${({ theme }) => theme.white};
   box-shadow: ${({ theme }) => theme.shadow};
   padding: 20px;
 `
@@ -17,7 +17,7 @@ export default () => (
       <Content>
         {nav.map(item => (
           <Link
-            activeStyle={{ color: theme.active }}
+            activeStyle={{ color: theme.deeporange }}
             style={{ marginRight: 10 }}
             key={item.name}
             to={item.path}

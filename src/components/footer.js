@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
 const Content = styled.footer`
-  background: ${({ theme }) => theme.background};
+  background: ${({ theme }) => theme.white};
   box-shadow: ${({ theme }) => theme.shadow};
   display: flex;
   justify-content: center;
