@@ -20,5 +20,4 @@ module.exports = {
     { name: "Github", url: 'https://github.com/<user>', icon: 'Github' },
     { name: "Mail", url: 'mailto:example@example.com', icon: 'Envelope' }
   ]
-
 }
