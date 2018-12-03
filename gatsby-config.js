@@ -33,6 +33,13 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'content',
+        path: `${__dirname}/content/`
+      }
+    },
+    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: siteConfig.themeColor,
