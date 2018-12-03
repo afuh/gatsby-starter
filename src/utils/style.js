@@ -111,7 +111,7 @@ export const GlobalStyle = createGlobalStyle`
     &:active,
     &:focus {
       color: ${theme.deeporange};
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 

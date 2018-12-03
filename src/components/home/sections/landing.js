@@ -3,19 +3,13 @@ import PropTypes from 'prop-types'
 import GatsbyImg from 'gatsby-image'
 
 const Landing = ({ frontmatter, html }) => (
-  <div style={{
-    margin: '40px 0',
-    borderTop: '1px solid lightgray',
-    borderBottom: '1px solid lightgray'
-  }}>
+  <div>
     <h2 dangerouslySetInnerHTML={{ __html: frontmatter.title }}/>
-    {frontmatter.image &&
-          <GatsbyImg
-            style={{ width: 300, height: 300 }}
-            fixed={frontmatter.image.childImageSharp.fixed}
-            alt={frontmatter.title}
-          />
-    }
+    <GatsbyImg
+      style={{ maxWidth: 600 }}
+      fluid={frontmatter.image.childImageSharp.fluid}
+      alt={frontmatter.title}
+    />
     <div dangerouslySetInnerHTML={{ __html: html }} />
   </div>
 )
