@@ -1,22 +1,26 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Landing from '../components/Landing'
+import Home from '../components/home'
 
-const Home = ({ location }) => (
-  <Layout location={location}>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/about">Go to About</Link>
-    <Landing />
+const HomePage = ({ data }) => (
+  <Layout>
+    <Home data={data} />
   </Layout>
 )
 
-Home.propTypes = {
-  location: PropTypes.object.isRequired
+HomePage.propTypes = {
+  data: PropTypes.object.isRequired
 }
 
-export default Home
+export default HomePage
+
+export const query = graphql`
+  query HOME_PAGE_QUERY {
+    landing: markdownRemark(fileAbsolutePath: { regex: "/landing/" }) {
+      ...MarkdownFragment
+    }
+  }
+`

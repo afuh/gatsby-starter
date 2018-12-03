@@ -8,8 +8,8 @@ export const MarkdownFragment = graphql`
       title
       image {
         childImageSharp {
-          fixed(width: 400) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

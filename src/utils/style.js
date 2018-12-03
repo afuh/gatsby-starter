@@ -52,7 +52,7 @@ export const hover = inner => css`
   }
 `
 
-export const fontS = size => css`
+export const fontSize = size => css`
   font-size: ${size}rem;
 
   ${media.mobile(css`
@@ -76,25 +76,12 @@ const defaultFont = [
   'sans-serif'
 ].join()
 
-const typography = css`
-  h1 { ${fontS(3.2)}; }
-  h2 { ${fontS(2.4)}; }
-  h3 { ${fontS(1.9)}; }
-
-  a {
-    text-decoration: none;
-    color: ${theme.black};
-
-      &:hover,
-      &:active,
-      &:focus {
-        text-decoration: underline;
-        color: ${theme.deeporange};
-      }
-    }
-`
-
 export const GlobalStyle = createGlobalStyle`
+  *::selection {
+    color: ${theme.white};
+    background: ${theme.black};
+  }
+
   html {
     box-sizing: border-box;
     font-size: 10px;
@@ -112,5 +99,29 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${defaultFont};
   }
 
-  ${typography}
+  h1 { ${fontSize(3.2)}; }
+  h2 { ${fontSize(2.4)}; }
+  h3 { ${fontSize(1.9)}; }
+
+  a {
+    color: ${theme.black};
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: ${theme.deeporange};
+      text-decoration: none;
+    }
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  button, input {
+    &:focus {
+      outline: 0;
+    }
+  }
 `

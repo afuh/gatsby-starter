@@ -27,7 +27,7 @@ Page.propTypes = {
 export default Page
 
 export const pageQuery = graphql`
-  query ($slug: String!) {
+  query PAGE_TEMPLATE_QUERY ($slug: String!) {
     page: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
